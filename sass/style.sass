@@ -3,6 +3,7 @@
 $color-warning: #FFB42A
 $color-black: #37404F
 $color-gray: #656565
+$color-yellow: #FFEE00
 
 body
 	color: $color-black
@@ -195,7 +196,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
 	margin-top: 57.5px
 	background-color: $color-warning
 	@media (min-width: 992px)
-		padding: 0 26px
+		padding-left: 20px
+	@media (min-width: 1200px)
+		padding-right: 26px
 	@media (max-width: 575.98px)
 		margin-left: -15px
 		margin-right: -15px
@@ -207,10 +210,23 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
 		box-shadow: none !important
 		transition: .3s
 		flex-grow: 1
+		padding-left: 20px
+		padding-right: 20px
+		@media (max-width: 767.98px)
+			max-width: 100%
 	&:not(.search-open)
 		.form-control
 			max-width: 0
 			padding: 0
+	.links
+		@media (max-width: 767.98px)
+			position: absolute
+			top: 0
+			left: 0
+			white-space: nowrap
+			transform: translateY(-50%)
+	a 
+		color: inherit
 	
 #search
 	min-width: 51px
@@ -219,7 +235,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
 	height: 51px
 	display: block
 	padding: 18px 15.5px
-	background-color: #FFEE00
+	background-color: $color-yellow
 	span 
 		width: 100%
 		display: block
@@ -237,6 +253,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
 				opacity: 0
 			&:nth-child(3)
 				transform: rotate(-45deg)
+
+.social
+	width: 51px
+	height: 51px
+	display: block
+	padding: 12px
+	background-color: $color-yellow
 
 .menubar
 	position: sticky
